@@ -10,7 +10,7 @@ $months = array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
 
 foreach ($months as $mes) {
 // // Read in a page
- $page = 'https://bop.diputoledo.es/webEbop/ebopResumen.jsp?publication_date=17/'.$mes.'/2018&publication_date_to=17/'.$mes.'/2009';
+ $page = 'https://bop.diputoledo.es/webEbop/ebopResumen.jsp?publication_date=01/'.$mes.'/2018&publication_date_to=01/'.$mes.'/2018';
  $html = scraperwiki::scrape($page);
 
 // // Find something on the page using css selectors
