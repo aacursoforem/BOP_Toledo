@@ -16,6 +16,11 @@ foreach ($months as $mes) {
 // // Find something on the page using css selectors
  $dom = new simple_html_dom();
  $dom->load($html);
+ echo'<h3>Anunciantes del mes '.$mes.'</h3>';
+    foreach($dom->find('h3') as $e) {
+	      echo $e->innertext . '<br>';
+    }	
+ echo $page.'<br>';
  print_r($dom->find('h3'));
  
 }  
