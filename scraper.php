@@ -10,18 +10,19 @@ $months = array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
 
 foreach ($months as $mes) {
 // // Read in a page
- $page = 'https://bop.diputoledo.es/webEbop/ebopResumen.jsp?publication_date=17/'.$mes.'/2018&publication_date_to=17/'.$mes.'/2009
+ $page = 'https://bop.diputoledo.es/webEbop/ebopResumen.jsp?publication_date=17/'.$mes.'/2018&publication_date_to=17/'.$mes.'/2009';
  $html = scraperwiki::scrape($page);
-//
+
 // // Find something on the page using css selectors
  $dom = new simple_html_dom();
  $dom->load($html);
  print_r($dom->find("h3.publisherBlock"));
  
-}  // end foreach
+}  
+// end foreach
  
 //
-// // Write out to the sqlite database using scraperwiki library
+// ___ Write out to the sqlite database using scraperwiki library
 // scraperwiki::save_sqlite(array('name'), array('name' => 'susan', 'occupation' => 'software developer'));
 //
 // // An arbitrary query against the database
